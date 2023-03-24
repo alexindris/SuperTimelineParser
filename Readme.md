@@ -1,5 +1,5 @@
 # Super Timeline parser
-
+(It is still a WIP)
 This code performs forensic analysis using the Plaso tool in a Docker container. The script prompts the user to input the path of a file or directory to be analyzed. The input file can be in zip or unziped folder. The program then copies the file to a temporary directory and runs Plaso analysis on it inside a Docker container.
 
 If the user selects to export the Super Timeline as a CSV file, the program prompts the user for the path of the directory where they want to save the file. The program then runs Plaso export inside the Docker container and saves the output CSV file to the specified directory.
