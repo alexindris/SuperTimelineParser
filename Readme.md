@@ -31,3 +31,16 @@ If the user does not select to export, the program exits.
 - If you choose to export the Super Timeline as a CSV file, enter the path of the directory where you want to save the file.
 - The program will save the output CSV file in the specified directory.
 - If you choose not to export the Super Timeline, the program will exit.
+
+## Usage with Timesketch:
+
+- Ensure that Docker is installed and running on your system.
+- Install the required Python modules by running ``` pip install -r requirements.txt.```
+- Run the script by executing the following command in a terminal: ``` python plaso_analysis.py ```
+- When prompted, enter the path of the file or directory you want to analyze.
+- The program will run Plaso analysis on the file/directory inside a Docker container and display the output in the terminal.
+- The program will prompt you to enter the path of the directory where you want to save the evidence.plaso file.
+- After entering the path, the program will save the evidence.plaso file in the specified directory.
+- Run the deploy_timesketch.sh script to deploy Timesketch on your system.
+- Open a browser and navigate to http://localhost:80 to access Timesketch.
+- There you can upload the evidence.plaso file and perform analysis on it.

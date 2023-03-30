@@ -49,6 +49,11 @@ def runPlasoExport(client, working_dir, outputDir):
     shutil.copyfile(working_dir + "/timeline.csv", outputDir + "/timeline.csv")
 
 
+def savePlasoFile(working_dir):
+    shutil.copyfile(working_dir + "/evidences.plaso",
+                    outputDir + "/evidences.plaso")
+
+
 working_dir = tempfile.mkdtemp()
 
 print('created temporary directory', working_dir)
@@ -59,6 +64,15 @@ print("The file has been copied to the directory: " + working_dir)
 print("Starting the analysis...")
 
 runPlasoAnalysis(client, working_dir)
+
+print("The analysis has been completed")
+
+response = input(
+    "Do you want to save the plaso file? (Press Y to continue or any other key to exit) \n")
+if (response == 'Y'):
+    outputDir = input(
+        "Enter the path of the directory where you want to save the plaso file: \n")
+    savePlasoFile(working_dir)
 
 
 response = input(
